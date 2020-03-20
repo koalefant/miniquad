@@ -1215,7 +1215,7 @@ impl Pipeline {
                 );
                 vertex_layout[attr_loc as usize] = attr;
 
-                buffer_data.offset += (std::mem::size_of::<f32>() as i32 * format.size()) as i64
+                buffer_data.offset += format.byte_len() as i64;
             }
         }
 
